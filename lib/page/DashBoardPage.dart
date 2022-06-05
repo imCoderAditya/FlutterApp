@@ -4,8 +4,7 @@ import 'package:flutterapp/Movies/Bollywood.dart';
 import 'package:flutterapp/Movies/HollyWood.dart';
 import 'package:flutterapp/Movies/SouthMovies.dart';
 import 'package:flutterapp/Movies/WebSeries.dart';
-import 'package:flutterapp/page/ShopePage.dart';
-import 'package:flutterapp/page/StorePage.dart';
+
 
 class DashBoard extends StatelessWidget {
   const DashBoard({ Key? key }) : super(key: key);

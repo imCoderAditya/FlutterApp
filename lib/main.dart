@@ -1,10 +1,10 @@
 
 // ignore_for_file: use_key_in_widget_constructors
-
 import 'package:flutter/material.dart';
 import 'package:flutterapp/DrawerPage.dart';
 import 'package:flutterapp/page/DashBoardPage.dart';
 import 'package:flutterapp/page/HomePage.dart';
+import 'package:flutterapp/page/SearchPage.dart';
 import 'package:flutterapp/page/ShopePage.dart';
 import 'package:flutterapp/page/StorePage.dart';
 
@@ -12,6 +12,7 @@ void main() {
   runApp(
     MaterialApp(
     // home: MyApp(),
+    debugShowCheckedModeBanner: false,
     theme: ThemeData(
         colorScheme: ColorScheme.fromSwatch(
       primarySwatch: Colors.blueGrey,
@@ -24,6 +25,7 @@ void main() {
         '/DashBoard': (context) => const DashBoard(),
         '/Shope': (context) => const ShopePage(),
         '/Store': (context) => const StorePage(),
+        "/Search":(context)=> const SearchPage(),
       },
   ));
 }
@@ -59,12 +61,14 @@ class _MyAppState extends State<MyApp> {
       floatingActionButtonAnimator: FloatingActionButtonAnimator.scaling,
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       floatingActionButton: FloatingActionButton(
-        onPressed: () => null,
+        onPressed: () => Navigator.pushNamed(context, "/Home"),
         child: const Icon(Icons.person),
       ),
       // comment Drawer in this page 
       drawer: DrawerPage(),
+      // This is a Body of Bottom _correntIndex
       body: _children[_currentIndex],
+     // This is a Bottum Navigation Bar  given Below
       bottomNavigationBar: BottomNavigationBar(
           currentIndex: _currentIndex,
           elevation: 40,

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutterapp/DrawerPage.dart';
 
 
 class HomePage extends StatelessWidget {
@@ -6,8 +7,21 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Center(
+    return Scaffold(
+      appBar: AppBar(
+        elevation: 0,
+        title: const Text("Home"),
+        actions: [
+          IconButton(
+            onPressed: ()=>Navigator.pushNamed(context, "/Search"),
+            icon: const Icon(Icons.search),
+          
+          )
+        ],
+      ),
+      drawer: DrawerPage(),
+
+      body: const Center(
         child: Text("Home Page"),
       ),
     );
