@@ -17,7 +17,7 @@ void main() {
       primarySwatch: Colors.blueGrey,
     )),
 
-   initialRoute: '/Home',
+   initialRoute: '/',
       routes: {
         '/': (context) => MyApp(),
         '/Home': (context) => const HomePage(),
@@ -53,15 +53,16 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text("Flutter App"),
-      ),
+      // appBar: AppBar(
+      //   title: const Text("Flutter App"),
+      // ),
       floatingActionButtonAnimator: FloatingActionButtonAnimator.scaling,
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       floatingActionButton: FloatingActionButton(
         onPressed: () => null,
         child: const Icon(Icons.person),
       ),
+      // comment Drawer in this page 
       drawer: DrawerPage(),
       body: _children[_currentIndex],
       bottomNavigationBar: BottomNavigationBar(
