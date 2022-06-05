@@ -1,3 +1,6 @@
+
+// ignore_for_file: use_key_in_widget_constructors
+
 import 'package:flutter/material.dart';
 import 'package:flutterapp/DrawerPage.dart';
 import 'package:flutterapp/page/DashBoardPage.dart';
@@ -6,14 +9,26 @@ import 'package:flutterapp/page/ShopePage.dart';
 import 'package:flutterapp/page/StorePage.dart';
 
 void main() {
-  runApp(MaterialApp(
-    home: MyApp(),
+  runApp(
+    MaterialApp(
+    // home: MyApp(),
     theme: ThemeData(
         colorScheme: ColorScheme.fromSwatch(
       primarySwatch: Colors.blueGrey,
     )),
+
+   initialRoute: '/Home',
+      routes: {
+        '/': (context) => MyApp(),
+        '/Home': (context) => const HomePage(),
+        '/DashBoard': (context) => const DashBoard(),
+        '/Shope': (context) => const ShopePage(),
+        '/Store': (context) => const StorePage(),
+      },
   ));
 }
+
+
 
 class MyApp extends StatefulWidget {
   @override
@@ -76,3 +91,9 @@ class _MyAppState extends State<MyApp> {
     );
   }
 }
+
+
+
+
+
+
