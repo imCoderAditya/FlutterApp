@@ -74,7 +74,6 @@ class _CustomLoginPageState extends State<CustomLoginPage> {
                     children: <Widget>[
                       TextFormField(
                         decoration: const InputDecoration(
-                          border: UnderlineInputBorder(),
                           hintText: "Enter username",
                           labelText: "username",
                         ),

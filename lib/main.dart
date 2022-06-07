@@ -1,6 +1,7 @@
 
 // ignore_for_file: use_key_in_widget_constructors
 import 'package:flutter/material.dart';
+import 'package:flutterapp/models/ItemProduct.dart';
 
 import 'package:flutterapp/page/CheckTabBar.dart';
 import 'package:flutterapp/page/DashBoardPage.dart';
@@ -17,12 +18,14 @@ void main() {
     MaterialApp(
     // home: MyApp(),
     debugShowCheckedModeBanner: false,
+  
     theme: ThemeData(
         colorScheme: ColorScheme.fromSwatch(
       primarySwatch: Colors.blueGrey,
+      
     )),
 
-   initialRoute: '/Login',
+   initialRoute: '/',
       routes: {
         '/': (context) => MyApp(),
         '/Login': (context) => const LoginPage(),
@@ -101,6 +104,8 @@ class _MyAppState extends State<MyApp> {
         ),
     );
   }
+
+  
 }
 
 
