@@ -1,12 +1,16 @@
 
 // ignore_for_file: use_key_in_widget_constructors
 import 'package:flutter/material.dart';
-import 'package:flutterapp/DrawerPage.dart';
+
+import 'package:flutterapp/page/CheckTabBar.dart';
 import 'package:flutterapp/page/DashBoardPage.dart';
 import 'package:flutterapp/page/HomePage.dart';
+import 'package:flutterapp/page/LoginPage.dart';
 import 'package:flutterapp/page/SearchPage.dart';
 import 'package:flutterapp/page/ShopePage.dart';
 import 'package:flutterapp/page/StorePage.dart';
+
+import 'Utils/DrawerPage.dart';
 
 void main() {
   runApp(
@@ -18,14 +22,16 @@ void main() {
       primarySwatch: Colors.blueGrey,
     )),
 
-   initialRoute: '/',
+   initialRoute: '/Login',
       routes: {
         '/': (context) => MyApp(),
+        '/Login': (context) => const LoginPage(),
         '/Home': (context) => const HomePage(),
         '/DashBoard': (context) => const DashBoard(),
         '/Shope': (context) => const ShopePage(),
         '/Store': (context) => const StorePage(),
         "/Search":(context)=> const SearchPage(),
+        "/checktabbar":(context)=>const ChaeckTabBar(),
       },
   ));
 }
