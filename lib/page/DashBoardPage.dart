@@ -17,18 +17,35 @@ class DashBoard extends StatelessWidget {
      length: 4,
       child: Scaffold(
         appBar: AppBar(
+          backgroundColor: Colors.red,
           title:const Text("DashBoard"),
 
           bottom: const TabBar(
+           padding: EdgeInsets.only(bottom: 1),
             indicatorColor: Colors.white,
             tabs: [
-                  Icon(Icons.home),
-                  Icon(Icons.timelapse),
-                  Icon(Icons.card_travel),
-                  Icon(Icons.currency_ruble_sharp),
+                  // Icon(Icons.home),
+                  // Icon(Icons.timelapse),
+                  // Icon(Icons.card_travel),
+                  // Icon(Icons.currency_ruble_sharp),
+                  Tab(
+                    child:Text("BollyWood"),
+                  ),
+                  Tab(
+                      child:Text("HollyWood"), 
+                  ),
+                  Tab(
+                    child: Text("South "),
+                  ),
+                  Tab(
+                    child: Text("Web Series"),
+                  )
+                  
+              
          ]),
         ),
         drawer: DrawerPage(),
+    
         body:const TabBarView(
           children: [
            BollyWoodPage(),
