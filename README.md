@@ -4,6 +4,12 @@ A new Flutter project.
 
 ## Getting Started
 
+<div>
+<img src="https://github.com/imCoderAditya/FlutterApp/blob/day3/android/app/src/main/res/drawable/1.jpg?raw=true" width="300" height="590">
+<img src="https://github.com/imCoderAditya/FlutterApp/blob/day3/android/app/src/main/res/drawable/2.jpg" width = "300" height="590">
+<img src = "https://github.com/imCoderAditya/FlutterApp/blob/day3/android/app/src/main/res/drawable/3.jpg" width ="300" height="590">
+</div>  
+
 This project is a starting point for a Flutter application.
 
 A few resources to get you started if this is your first Flutter project:
