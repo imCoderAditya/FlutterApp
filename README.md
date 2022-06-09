@@ -1,7 +1,7 @@
 # flutterapp
 
 A new Flutter project.
-![](https://drive.google.com/file/d/1DrY-Uo0ENlQB6Ommyi11J2-8nhM1-adt/view?usp=drivesdk)
+![](https://drive.google.com/file/d/1DrY-Uo0ENlQB6Ommyi11J2-8nhM1-adt/view)
 
 ## Getting Started
 
