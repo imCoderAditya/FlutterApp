@@ -1,19 +1,42 @@
+
+// ignore_for_file: use_key_in_widget_constructors
 import 'package:flutter/material.dart';
-import 'package:flutterapp/DrawerPage.dart';
+
+import 'package:flutterapp/page/CheckTabBar.dart';
 import 'package:flutterapp/page/DashBoardPage.dart';
 import 'package:flutterapp/page/HomePage.dart';
+import 'package:flutterapp/page/LoginPage.dart';
+import 'package:flutterapp/page/SearchPage.dart';
 import 'package:flutterapp/page/ShopePage.dart';
 import 'package:flutterapp/page/StorePage.dart';
 
+import 'Utils/DrawerPage.dart';
+
 void main() {
-  runApp(MaterialApp(
-    home: MyApp(),
+  runApp(
+    MaterialApp(
+    // home: MyApp(),
+    debugShowCheckedModeBanner: false,
     theme: ThemeData(
         colorScheme: ColorScheme.fromSwatch(
       primarySwatch: Colors.blueGrey,
     )),
+
+   initialRoute: '/Login',
+      routes: {
+        '/': (context) => MyApp(),
+        '/Login': (context) => const LoginPage(),
+        '/Home': (context) => const HomePage(),
+        '/DashBoard': (context) => const DashBoard(),
+        '/Shope': (context) => const ShopePage(),
+        '/Store': (context) => const StorePage(),
+        "/Search":(context)=> const SearchPage(),
+        "/checktabbar":(context)=>const ChaeckTabBar(),
+      },
   ));
 }
+
+
 
 class MyApp extends StatefulWidget {
   @override
@@ -38,17 +61,20 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text("Flutter App"),
-      ),
+      // appBar: AppBar(
+      //   title: const Text("Flutter App"),
+      // ),
       floatingActionButtonAnimator: FloatingActionButtonAnimator.scaling,
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       floatingActionButton: FloatingActionButton(
-        onPressed: () => null,
+        onPressed: () => Navigator.pushNamed(context, "/Home"),
         child: const Icon(Icons.person),
       ),
+      // comment Drawer in this page 
       drawer: DrawerPage(),
+      // This is a Body of Bottom _correntIndex
       body: _children[_currentIndex],
+     // This is a Bottum Navigation Bar  given Below
       bottomNavigationBar: BottomNavigationBar(
           currentIndex: _currentIndex,
           elevation: 40,
@@ -76,3 +102,9 @@ class _MyAppState extends State<MyApp> {
     );
   }
 }
+
+
+
+
+
+
