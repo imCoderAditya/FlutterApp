@@ -3,7 +3,7 @@
 A new Flutter project.
 
 ## Getting Started
-<!-- ![]<img src = "https://github.com/imCoderAditya/FlutterApp/blob/day3/android/app/src/main/res/drawable/3.jpg" width ="300" heeight="590">-->
+<!--  ![](https://github.com/imCoderAditya/FlutterApp/blob/day3/android/app/src/main/res/drawable/3.jpg ) -->
 <div>
 <img src="https://github.com/imCoderAditya/FlutterApp/blob/day3/android/app/src/main/res/drawable/1.jpg?raw=true" width="300" height="590">
 <img src="https://github.com/imCoderAditya/FlutterApp/blob/day3/android/app/src/main/res/drawable/2.jpg" width = "300" height="590">
